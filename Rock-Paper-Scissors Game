@@ -1,0 +1,25 @@
+import random
+
+def get_winner(user, computer):
+    rules = {
+        "rock": "scissors",
+        "scissors": "paper",
+        "paper": "rock"
+    }
+    if user == computer:
+        return "Draw"
+    elif rules[user] == computer:
+        return "You win!"
+    else:
+        return "Computer wins!"
+
+if __name__ == "__main__":
+    choices = ["rock", "paper", "scissors"]
+    print("Rock-Paper-Scissors Game")
+    user_choice = input("Enter rock, paper, or scissors: ").lower()
+    if user_choice not in choices:
+        print("Invalid choice")
+    else:
+        computer_choice = random.choice(choices)
+        print(f"Computer chose: {computer_choice}")
+        print(get_winner(user_choice, computer_choice))

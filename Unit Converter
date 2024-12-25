@@ -1,0 +1,19 @@
+def km_to_miles(km):
+    return km * 0.621371
+
+def miles_to_km(miles):
+    return miles / 0.621371
+
+if __name__ == "__main__":
+    print("Unit Converter")
+    print("1. Kilometers to Miles")
+    print("2. Miles to Kilometers")
+    choice = input("Choose an option: ")
+    if choice == "1":
+        km = float(input("Enter kilometers: "))
+        print(f"{km} km is equal to {km_to_miles(km):.2f} miles.")
+    elif choice == "2":
+        miles = float(input("Enter miles: "))
+        print(f"{miles} miles is equal to {miles_to_km(miles):.2f} km.")
+    else:
+        print("Invalid option.")
